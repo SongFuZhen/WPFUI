@@ -5,10 +5,10 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:WPFUI"
       mc:Ignorable="d" 
-      d:DesignHeight="350" d:DesignWidth="950"
+      d:DesignHeight="490" d:DesignWidth="950"
       Title="SOP">
 
-    <Grid>
+    <Grid Margin="0 -10 0 0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="8*"></ColumnDefinition>
             <ColumnDefinition Width="2*"></ColumnDefinition>
@@ -33,41 +33,41 @@
                 </Grid.ColumnDefinitions>
 
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top">
-                    <Label FontSize="14">当前订单：</Label>
-                    <Label FontSize="14" FontWeight="Bold">T-0032342</Label>
+                    <Label FontSize="14" Foreground="White">当前订单：</Label>
+                    <Label FontSize="14" FontWeight="Bold" Foreground="White">T-0032342</Label>
                 </StackPanel>
 
                 <StackPanel Grid.Column="1" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top">
-                    <Label FontSize="14">要货状态：</Label>
-                    <Label FontSize="14">A700</Label>
+                    <Label FontSize="14" Foreground="White">要货状态：</Label>
+                    <Label FontSize="14" Foreground="White">A700</Label>
 
-                    <Label FontSize="14">预计8小时后交货</Label>
+                    <Label FontSize="14" Foreground="White">预计8小时后交货</Label>
                     <Border CornerRadius="50" Width="60" Padding="6" Background="Green">
                         <TextBlock HorizontalAlignment="Center" Foreground="White">正常</TextBlock>
                     </Border>
                 </StackPanel>
 
                 <StackPanel Grid.Row="1" Orientation="Horizontal">
-                    <Label FontSize="14">作业指导书：</Label>
-                    <Label FontSize="20" Margin="0 -4 0 0 " FontWeight="Bold">WI-0101</Label>
+                    <Label FontSize="14" Foreground="White">作业指导书：</Label>
+                    <Label FontSize="20" Margin="0 -4 0 0 " FontWeight="Bold" Foreground="White">WI-0101</Label>
                 </StackPanel>
 
                 <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
-                    <Label FontSize="14">总额定工时：</Label>
-                    <Label FontSize="14" FontWeight="Bold">15秒</Label>
+                    <Label FontSize="14" Foreground="White">总额定工时：</Label>
+                    <Label FontSize="14" FontWeight="Bold" Foreground="White">15秒</Label>
                 </StackPanel>
 
                 <StackPanel Grid.Column="2" Grid.Row="1" Orientation="Horizontal">
-                    <Label FontSize="14">总步骤数：</Label>
-                    <Label FontSize="14" FontWeight="Bold">5步</Label>
+                    <Label FontSize="14" Foreground="White">总步骤数：</Label>
+                    <Label FontSize="14" FontWeight="Bold" Foreground="White">5步</Label>
                 </StackPanel>
 
                 <StackPanel Grid.Row="2">
-                    <Label FontSize="20">10 步骤中的第5步</Label>
+                    <Label FontSize="20" Foreground="White">10 步骤中的第5步</Label>
                 </StackPanel>
 
                 <StackPanel Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2">
-                    <Label FontSize="20">0:00:23/0:21:43</Label>
+                    <Label FontSize="20" Foreground="White">0:00:23/0:21:43</Label>
                 </StackPanel>
             </Grid>
 
@@ -83,17 +83,17 @@
                         <ColumnDefinition Width="6*"></ColumnDefinition>
                         <ColumnDefinition Width="2*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    <Button Style="{DynamicResource MetroCircleButtonStyle}" Height="50" Width="50" VerticalAlignment="Top" HorizontalAlignment="Right" Background="Black">
-                        <Rectangle Width="20" Height="20" Fill="White">
+                    <Button Style="{DynamicResource MetroCircleButtonStyle}" Height="50" Width="50" VerticalAlignment="Top" HorizontalAlignment="Right" Background="White">
+                        <Rectangle Width="20" Height="20" Fill="Green">
                             <Rectangle.OpacityMask>
-                                <VisualBrush Stretch="Fill" Visual="{DynamicResource appbar_arrow_left}">
+                                <VisualBrush Stretch="Fill" Visual="{DynamicResource appbar_arrow_left}">   
                                 </VisualBrush>
                             </Rectangle.OpacityMask>
                         </Rectangle>
                     </Button>
-                    <Label FontSize="30" HorizontalAlignment="Center" Grid.Column="1">将线号插入A孔位</Label>
-                    <Button Grid.Column="2" Style="{DynamicResource MetroCircleButtonStyle}" Height="50" Width="50" VerticalAlignment="Top" HorizontalAlignment="Left" Background="Black">
-                        <Rectangle Width="20" Height="20" Fill="White">
+                    <Label FontSize="30" HorizontalAlignment="Center" Grid.Column="1" Foreground="White">将线号插入A孔位</Label>
+                    <Button Grid.Column="2" Style="{DynamicResource MetroCircleButtonStyle}" Height="50" Width="50" VerticalAlignment="Top" HorizontalAlignment="Left" Background="White">
+                        <Rectangle Width="20" Height="20" Fill="Green">
                             <Rectangle.OpacityMask>
                                 <VisualBrush Stretch="Fill" Visual="{DynamicResource appbar_arrow_right}">
                                 </VisualBrush>
@@ -107,36 +107,96 @@
                         <ColumnDefinition Width="*"></ColumnDefinition>
                         <ColumnDefinition Width="2*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    
+
                     <MediaElement Grid.Column="1" />
                 </Grid>
             </Grid>
         </Grid>
 
 
-        <DockPanel Grid.Column="1" HorizontalAlignment="Center">
-            <DockPanel DockPanel.Dock="Top">
-                <Image Height="50" Width="50" DockPanel.Dock="Top" Source="/images/QR.jpg"></Image>
-                <Image Height="50" Width="50" DockPanel.Dock="Top" Source="/images/footer logo.png"></Image>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="2*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Image Height="80" Width="80" Source="/images/QR.jpg"></Image>
+                <Image Grid.Row="1" Height="80" Width="80" Source="/images/footer logo.png"></Image>
+            </Grid>
+
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="4*"></RowDefinition>
+                </Grid.RowDefinitions>
+
                 <StackPanel Orientation="Vertical">
-                    <Label HorizontalAlignment="Center" FontSize="15" Margin="0 -10 0 0">50110231</Label>
-                    <Label HorizontalAlignment="Center" FontSize="15" Margin="0 -10 0 0">王芳</Label>
+                    <Label HorizontalAlignment="Center" FontSize="14" Foreground="White">50110231</Label>
+                    <Label HorizontalAlignment="Center" FontSize="14" Foreground="White">王芳</Label>
                 </StackPanel>
-            </DockPanel>
-            <StackPanel Orientation="Vertical">
-                <Button  Background="Green" Height="40">
-                    <Label Foreground="White" FontSize="16" FontFamily="Solomon_Sans_Light">完成</Label>
-                </Button>
-                <Button  Background="Yellow" Height="40" Margin="0 10 0 0">
-                    <Label Foreground="Black" FontSize="16" FontFamily="Solomon_Sans_Light">缺料召唤</Label>
-                </Button>
-                <Button  Background="DarkRed" Height="40"  Margin="0 10 0 0">
-                    <Label Foreground="White" FontSize="16" FontFamily="Solomon_Sans_Light">返工控制</Label>
-                </Button>
-                <Button  Background="LightGray" Height="40"  Margin="0 10 0 0">
-                    <Label Foreground="Black" FontSize="16" FontFamily="Solomon_Sans_Light">注册人员</Label>
-                </Button>
-            </StackPanel>
-        </DockPanel>
+
+                <Grid Grid.Row="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <Button Height="50" Width="160" FontFamily="Solomon_Sans_Bold" BorderThickness="1">
+                        <DockPanel>
+                            <Rectangle Width="20" Height="20" Fill="Green">
+                                <Rectangle.OpacityMask>
+                                    <VisualBrush Stretch="Fill" Visual="{DynamicResource appbar_thumbs_up}">
+                                    </VisualBrush>
+                                </Rectangle.OpacityMask>
+                            </Rectangle>
+                            <Label FontFamily="Solomon_Sans_Bold" FontSize="20" Foreground="Green" Margin="20 0 0 0">完　　成</Label>
+                        </DockPanel>
+                    </Button>
+                    
+                    <Button Grid.Row="1" Height="50" Width="160" FontFamily="Solomon_Sans_Bold" BorderThickness="1">
+                        <DockPanel>
+                            <Rectangle Width="20" Height="20" Fill="#FF6347">
+                                <Rectangle.OpacityMask>
+                                    <VisualBrush Stretch="Fill" Visual="{DynamicResource appbar_archive}">
+                                    </VisualBrush>
+                                </Rectangle.OpacityMask>
+                            </Rectangle>
+                            <Label FontFamily="Solomon_Sans_Bold" FontSize="20" Foreground="#FF6347" Margin="20 0 0 0">缺料召唤</Label>
+                        </DockPanel>
+                    </Button>
+
+                    <Button Grid.Row="2" Height="50" Width="160" FontFamily="Solomon_Sans_Bold" BorderThickness="1">
+                        <DockPanel>
+                            <Rectangle Width="20" Height="20" Fill="Red">
+                                <Rectangle.OpacityMask>
+                                    <VisualBrush Stretch="Fill" Visual="{DynamicResource appbar_undo}">
+                                    </VisualBrush>
+                                </Rectangle.OpacityMask>
+                            </Rectangle>
+                            <Label FontFamily="Solomon_Sans_Bold" FontSize="20" Foreground="Red" Margin="20 0 0 0">返工控制</Label>
+                        </DockPanel>
+                    </Button>
+
+                    <Button Grid.Row="3" Height="50" Width="160" FontFamily="Solomon_Sans_Bold" BorderThickness="1">
+                        <DockPanel>
+                            <Rectangle Width="20" Height="20" Fill="#B8860B">
+                                <Rectangle.OpacityMask>
+                                    <VisualBrush Stretch="Fill" Visual="{DynamicResource appbar_user_add}">
+                                    </VisualBrush>
+                                </Rectangle.OpacityMask>
+                            </Rectangle>
+                            <Label FontFamily="Solomon_Sans_Bold" FontSize="20" Foreground="#B8860B" Margin="20 0 0 0">注册人员</Label>
+                        </DockPanel>
+                    </Button>
+                </Grid>
+            </Grid>
+        </Grid>
     </Grid>
 </Page>
