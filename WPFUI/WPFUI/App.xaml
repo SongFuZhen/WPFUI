@@ -47,20 +47,6 @@
                 </Setter>
             </Style>
 
-            <!--<Style x:Key="{x:Type Button}" TargetType="Button">
-                <Setter Property="Cursor" Value="Hand"/>
-                <Setter Property="ClickMode" Value="Press"/>
-                <Setter Property="Template">
-                    <Setter.Value>
-                        <ControlTemplate TargetType="Button">
-                            <Border BorderBrush="White" BorderThickness="1" Background="White" CornerRadius="10">
-                                <ContentPresenter Margin="4,5,4,4" Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
-                            </Border>
-                        </ControlTemplate>
-                    </Setter.Value>
-                </Setter>
-            </Style>-->
-
             <Style TargetType="Button">
                 <Setter Property="IsEnabled" Value="true"/>
                 <Setter Property="IsTabStop" Value="true"/>

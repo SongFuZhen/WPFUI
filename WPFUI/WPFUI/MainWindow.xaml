@@ -20,7 +20,7 @@
             </Grid.ColumnDefinitions>
             <!--40%(86,32) 50%:(108,40)  60%(129,48)  70%:(151,56) 80%:(172,64) 90%:(194,72)-->
             <Image Stretch="Fill" Height="48" Width="129" Margin="0" VerticalAlignment="Top" Source="/images/logo.png"></Image>
-            <Button Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="20" Width="40" Click="Next_Page">Next</Button>
+            <Button Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Click="Next_Page">Next</Button>
         </Grid>
         <Frame x:Name="NaviFrame" Grid.Row="1" NavigationUIVisibility="Hidden" Cursor="Hand"/>
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,6 +22,7 @@ namespace WPFUI
     public partial class SOP : Page
     {
         MainWindow parentWindow;
+        ObservableCollection<ShowList> listData = new ObservableCollection<ShowList>();
 
         public SOP()
         {
@@ -31,6 +33,20 @@ namespace WPFUI
         {
             InitializeComponent();
             this.parentWindow = parentWindow;
+        }
+
+        private void ListDataLoad(object sender, RoutedEventArgs e)
+        {
+            int itemcount = 20;
+            for(int i = 0; i < itemcount; i++)
+            {
+                listData.Add(new ShowList()
+                {
+                    ListNumber = i,
+                    ListName = "ListShow"+i * 20 
+                });
+            }
+            this.ShowListName.ItemsSource = listData;
         }
     }
 }

@@ -36,7 +36,7 @@
         </DockPanel>
 
         <DataGrid Grid.Column="1" Grid.Row="1" Name="MyDataGrid" VerticalScrollBarVisibility="Auto" VerticalAlignment="Top" 
-                  HorizontalAlignment="Left" Width="440" Margin="20 0 0 0">
+                  HorizontalAlignment="Left" Width="440" Margin="22 0 0 0">
             <DataGrid.ColumnHeaderStyle>
                 <Style TargetType="DataGridColumnHeader">
                     <Setter Property="Foreground" Value="Black"/>
@@ -46,7 +46,7 @@
                 </Style>
             </DataGrid.ColumnHeaderStyle>
             <DataGrid.Columns>
-                <!--<DataGridTextColumn Header="BoxID" Binding="{Binding BoxID}"/>
+                     <!--<DataGridTextColumn Header="BoxID" Binding="{Binding BoxID}"/>
                     <DataGridTextColumn Header="Part number" Binding="{Binding PartNumber}"/>-->
             </DataGrid.Columns>
         </DataGrid>

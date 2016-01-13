@@ -63,6 +63,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ShowList.cs" />
     <Compile Include="SOP.xaml.cs">
       <DependentUpon>SOP.xaml</DependentUpon>
     </Compile>
