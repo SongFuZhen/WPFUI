@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:WPFUI"
       mc:Ignorable="d" 
       d:DesignHeight="490" d:DesignWidth="950" Loaded="ListDataLoad"
-      Title="SOP">
+      Title="SOP" Name="SOPName">
 
     <Grid Margin="0 -10 0 0">
         <Grid.ColumnDefinitions>

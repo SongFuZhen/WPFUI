@@ -1,0 +1,62 @@
+﻿<Page x:Class="WPFUI.Scale"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WPFUI"
+      mc:Ignorable="d" 
+      d:DesignHeight="490" d:DesignWidth="950"
+      Title="Scale">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Image Source="/images/scale.png"></Image>
+
+
+        <Grid Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label FontSize="20" Content="PN:" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="#FAFAD2"></Label>
+            <Label Grid.Column="2" FontSize="30" Foreground="#FFD700" Margin="20 0 0 0" Content="41022100" VerticalAlignment="Center"></Label>
+
+
+            <Label Grid.Row="1" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="#FAFAD2" Content="Position:"></Label>
+            <Label Grid.Row="1" Grid.Column="1" FontSize="30" Margin="20 0 0 0" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="#FFD700" Content="SA 01 01 01"></Label>
+
+
+            <Label Grid.Row="2" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="#FAFAD2" Content="Piece:"></Label>
+            <Label Grid.Row="2" Grid.Column="2" HorizontalAlignment="Left" Margin="20 0 0 0"  VerticalAlignment="Center" FontSize="30" Foreground="#FFD700" Content="300"></Label>
+
+            <Label Grid.Row="3" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Right" Foreground="#FAFAD2" Content="Weight:"></Label>
+            <Label Grid.Row="3" Grid.Column="2" HorizontalAlignment="Left" Margin="20 0 0 0" VerticalAlignment="Center" FontSize="30" Foreground="#FFD700" Content="150g"></Label>
+
+            <Label Grid.Row="4" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="#FAFAD2" Content="Actual Weight:"></Label>
+            <TextBox Height="50" Width="150" Grid.Row="4" Grid.Column="2" HorizontalAlignment="Left" Margin="20 0 0 0"  VerticalAlignment="Center" Foreground="#FFA500" Padding="20 0 0 0" Text="149g"></TextBox>
+            <Border Grid.Row="4" Grid.Column="2" Margin="30 0 0 0" CornerRadius="50" Width="100" Height="50" Padding="15" Background="Green">
+                <TextBlock HorizontalAlignment="Center" Foreground="White">Pass</TextBlock>
+            </Border>
+
+            <Button HorizontalAlignment="Left" Margin="20 0 0 0" Grid.Row="5" Grid.Column="2" Grid.RowSpan="2" Height="60" Width="160" FontFamily="Solomon_Sans_Bold" BorderThickness="1">
+                <DockPanel>
+                    <Image Height="18" Width="24"  Source="/images/confirm icon.png"/>
+                    <Label FontFamily="Solomon_Sans_Bold" FontSize="20" Margin="20 0 0 0">Confirm</Label>
+                </DockPanel>
+            </Button>
+        </Grid>
+    </Grid>
+</Page>

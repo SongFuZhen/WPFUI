@@ -55,8 +55,13 @@ namespace WPFUI
                 this.currentPage = new DataGrid(this);
                 NaviFrame.NavigationService.Navigate(this.currentPage);
             }
-            else if (this.currentPage.Name == "DataGridName") {
+            else if (this.currentPage.Name == "DataGridName")
+            {
                 this.currentPage = new SOP(this);
+                NaviFrame.NavigationService.Navigate(this.currentPage);
+            }
+            else if (this.currentPage.Name == "SOPName") {
+                this.currentPage = new Scale(this);
                 NaviFrame.NavigationService.Navigate(this.currentPage);
             }
             else
